@@ -1,0 +1,13 @@
+##忽略相关文件##
+
+#Astar/.wing
+#Astar/bin-debug
+#Astar/libs
+
+#astar_ts/.wing
+#astar_ts/bin-debug
+#astar_ts/libs
+
+*/.wing
+*/bin-debug
+*/libs
