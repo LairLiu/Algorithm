@@ -115,7 +115,7 @@ module wy {
 		 * @version 0.0.1
 		 * @platform egret3.0.2
 		 */
-		public static sleep(time:number): any {
+		public static sleep(time: number): any {
 			return new Promise(resolve => {
 				egret.setTimeout(() => {
 					resolve();
@@ -245,9 +245,9 @@ module wy {
 		 * @version 0.0.1
 		 * @platform egret3.0.3
 		 */
-		public static createSprBtn(x: number, y: number, w: number, h: number, alpha: number = 0): egret.Sprite {
+		public static createSprBtn(x: number, y: number, w: number, h: number, color: number = 0xffffff, alpha: number = 0): egret.Sprite {
 			var btn: egret.Sprite = new egret.Sprite();
-			btn.graphics.beginFill(0xffffff, alpha);
+			btn.graphics.beginFill(color, alpha);
 			btn.graphics.drawRect(0, 0, w, h);
 			btn.graphics.endFill();
 			btn.x = x;

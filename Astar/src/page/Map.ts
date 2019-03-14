@@ -1,12 +1,15 @@
-module Astar {
+module astar {
     export class Map {
 
         public nodes: Node[][];
         public constructor(rows: number, cols: number) {
             this.nodes = [];
-            for (let i = 0; i < rows; i++) {
+            this._numRows = rows;
+            this._numCols = cols;
+
+            for (let i = 0; i < cols; i++) {
                 this.nodes[i] = [];
-                for (var j = 0; j < cols; j++) {
+                for (var j = 0; j < rows; j++) {
                     this.nodes[i][j] = new Node(i, j);
                 }
             }
@@ -15,6 +18,18 @@ module Astar {
         /**节点 */
         public getNode(x: number, y: number): Node {
             return this.nodes[x][y];
+        }
+
+        private _numRows: number;
+        /**行数-高 */
+        public get numRows(): number {
+            return this._numRows;
+        }
+
+        private _numCols: number;
+        /**列数-宽 */
+        public get numCols(): number {
+            return this._numCols;
         }
 
         private _startNode: Node;

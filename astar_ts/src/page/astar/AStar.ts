@@ -173,7 +173,8 @@ namespace astar{
 		//曼哈顿算法
 		private manhattan(node:Node)
 		{
-			return Math.abs(node.x - this._endNode.x) * this._straightCost + Math.abs(node.y + this._endNode.y) * this._straightCost;
+			return Math.abs(node.x - this._endNode.x) * this._straightCost + 
+			Math.abs(node.y + this._endNode.y) * this._straightCost;
 		}
 		
 

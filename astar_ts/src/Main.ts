@@ -130,9 +130,9 @@ class Main extends egret.DisplayObjectContainer {
     private async createGameScene() {
         
         //await wy.Tools.sleep(1000);
-		//wy.BGM.init("bgm",true,'music_btn_png');
+        //wy.BGM.init("bgm",true,'music_btn_png');
+        wy.hideScene(wy.PopType.LEFTOUT);
+        
+        this.addChild(new Game());
     }
-
 }
-
-
